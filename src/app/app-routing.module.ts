@@ -34,13 +34,16 @@ import { PagesRegisterComponent } from './pages/pages-register/pages-register.co
 import { UsersProfileComponent } from './pages/users-profile/users-profile.component';
 import { UpdatePropertyComponent } from './my-properties/my-property/components/update-property/update-property.component';
 import { LoginComponent } from './auth/components/login/login.component';
+import { TenantDataComponent } from './tenants/tenant-data/tenant-data.component';
+import { ViewDataComponent } from './tenants/view-data/view-data.component';
+import { AvailableUnitsComponent } from './units/available-units/available-units.component';
 
 const routes: Routes = [
 
   { path: '', component: LoginComponent },
   { path: 'dashboard', component: DashboardComponent },
-  { path: 'alerts', component: AlertsComponent },
-  { path: 'accordion', component: AccordionComponent },
+  {path: 'tenant-data', component: TenantDataComponent},
+  { path: 'view-data', component: ViewDataComponent },
   { path: 'badges', component: BadgesComponent },
   { path: 'breadcrumbs', component: BreadcrumbsComponent },
   { path: 'buttons', component: ButtonsComponent },
@@ -60,7 +63,7 @@ const routes: Routes = [
   { path: 'progress', component: ProgressComponent },
   { path: 'spinners', component: SpinnersComponent },
   { path: 'tables-data', component: TablesDataComponent },
-  { path: 'tables-general', component: TablesGeneralComponent },
+  { path: 'available-units', component: AvailableUnitsComponent },
   { path: 'tabs', component: TabsComponent },
   {path: 'update-property', component: UpdatePropertyComponent},
   { path: 'tooltips', component: TooltipsComponent },

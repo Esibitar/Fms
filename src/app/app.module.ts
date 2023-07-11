@@ -11,7 +11,6 @@ import { SidebarComponent } from './layouts/sidebar/sidebar.component';
 import { FooterComponent } from './layouts/footer/footer.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { AlertsComponent } from './components/alerts/alerts.component';
-import { AccordionComponent } from './components/accordion/accordion.component';
 import { BadgesComponent } from './components/badges/badges.component';
 import { BreadcrumbsComponent } from './components/breadcrumbs/breadcrumbs.component';
 import { ButtonsComponent } from './components/buttons/buttons.component';
@@ -28,7 +27,6 @@ import { MyPropertyComponent } from './my-properties/my-property/components/my-p
 import { FormsLayoutsComponent } from './components/forms-layouts/forms-layouts.component';
 import { FormsEditorsComponent } from './components/forms-editors/forms-editors.component';
 import { TablesGeneralComponent } from './components/tables-general/tables-general.component';
-import { TablesDataComponent } from './components/tables-data/tables-data.component';
 import { ChartsChartjsComponent } from './components/charts-chartjs/charts-chartjs.component';
 import { ChartsApexchartsComponent } from './components/charts-apexcharts/charts-apexcharts.component';
 import { IconsBootstrapComponent } from './components/icons-bootstrap/icons-bootstrap.component';
@@ -41,6 +39,10 @@ import { PagesRegisterComponent } from './pages/pages-register/pages-register.co
 import { PagesLoginComponent } from './pages/pages-login/pages-login.component';
 import { PagesError404Component } from './pages/pages-error404/pages-error404.component';
 import { PagesBlankComponent } from './pages/pages-blank/pages-blank.component';
+import { AccordionComponent } from './components/accordion/accordion.component';
+import { TablesDataComponent } from './components/tables-data/tables-data.component';
+import { TenantsModule } from './tenants/tenants.module';
+import { UnitsModule } from './units/units.module';
 import { MyPropertyModule } from './my-properties/my-property/my-property.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AuthModule } from './auth/auth.module';
@@ -82,16 +84,13 @@ import { AuthModule } from './auth/auth.module';
     PagesRegisterComponent,
     PagesLoginComponent,
     PagesError404Component,
-    PagesBlankComponent,
+    PagesBlankComponent
+
+
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    FormsModule,
-    HttpClientModule,
-    MyPropertyModule,
-    AuthModule,
-    BrowserAnimationsModule
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
