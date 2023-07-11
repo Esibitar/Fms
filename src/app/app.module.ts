@@ -1,6 +1,9 @@
+
 import { AppRoutingModule } from './app-routing.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from "@angular/common/http";
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './layouts/header/header.component';
@@ -21,7 +24,7 @@ import { PaginationComponent } from './components/pagination/pagination.componen
 import { ProgressComponent } from './components/progress/progress.component';
 import { SpinnersComponent } from './components/spinners/spinners.component';
 import { TooltipsComponent } from './components/tooltips/tooltips.component';
-import { FormsElementsComponent } from './components/forms-elements/forms-elements.component';
+import { MyPropertyComponent } from './my-properties/my-property/components/my-properties/my-property.component';
 import { FormsLayoutsComponent } from './components/forms-layouts/forms-layouts.component';
 import { FormsEditorsComponent } from './components/forms-editors/forms-editors.component';
 import { TablesGeneralComponent } from './components/tables-general/tables-general.component';
@@ -38,6 +41,10 @@ import { PagesRegisterComponent } from './pages/pages-register/pages-register.co
 import { PagesLoginComponent } from './pages/pages-login/pages-login.component';
 import { PagesError404Component } from './pages/pages-error404/pages-error404.component';
 import { PagesBlankComponent } from './pages/pages-blank/pages-blank.component';
+import { MyPropertyModule } from './my-properties/my-property/my-property.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AuthModule } from './auth/auth.module';
+
 
 @NgModule({
   declarations: [
@@ -60,7 +67,6 @@ import { PagesBlankComponent } from './pages/pages-blank/pages-blank.component';
     ProgressComponent,
     SpinnersComponent,
     TooltipsComponent,
-    FormsElementsComponent,
     FormsLayoutsComponent,
     FormsEditorsComponent,
     TablesGeneralComponent,
@@ -76,13 +82,16 @@ import { PagesBlankComponent } from './pages/pages-blank/pages-blank.component';
     PagesRegisterComponent,
     PagesLoginComponent,
     PagesError404Component,
-    PagesBlankComponent
-
-
+    PagesBlankComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule,
+    MyPropertyModule,
+    AuthModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

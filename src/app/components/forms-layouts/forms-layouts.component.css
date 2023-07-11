@@ -1,1 +1,7 @@
 .card-body .btn{margin-right: 5px;}
+.main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
