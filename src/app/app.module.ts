@@ -40,6 +40,7 @@ import { AccordionComponent } from './components/accordion/accordion.component';
 import { TablesDataComponent } from './components/tables-data/tables-data.component';
 import { TenantsModule } from './tenants/tenants.module';
 import { UnitsModule } from './units/units.module';
+import { MyPropertiesModule } from './my-properties/my-properties.module';
 
 @NgModule({
   declarations: [
@@ -82,7 +83,8 @@ import { UnitsModule } from './units/units.module';
     BrowserModule,
     AppRoutingModule,
     TenantsModule,
-    UnitsModule
+    UnitsModule,
+    MyPropertiesModule
   ],
   providers: [],
   bootstrap: [AppComponent]
