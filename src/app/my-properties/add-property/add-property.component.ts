@@ -7,6 +7,9 @@ import { Router } from '@angular/router';
   styleUrls: ['./add-property.component.css']
 })
 export class AddPropertyComponent {
+  showPaybillInput: boolean = false;
+  showTillNumberInputs: boolean = false;
+
   constructor(private router: Router){
 
   }
@@ -14,4 +17,11 @@ export class AddPropertyComponent {
 goBactToTenant() {
 this.router.navigate(['/properties'])
 }
+
+togglePaymentMethod(method: string) {
+  this.showPaybillInput = method === 'paybill';
+  this.showTillNumberInputs = method === 'tillNumber';
+}
+
+
 }
