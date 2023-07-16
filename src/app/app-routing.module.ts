@@ -41,6 +41,7 @@ import { AddTenantComponent } from './tenants/add-tenant/add-tenant.component';
 import { PropertiesComponent } from './my-properties/properties/properties.component';
 import { AddPropertyComponent } from './my-properties/add-property/add-property.component';
 import { AddUnitComponent } from './my-properties/add-unit/add-unit.component';
+import { MaintananceComponent } from './my-properties/maintanance/maintanance.component';
 
 const routes: Routes = [
   { path: '', component: DashboardComponent },
@@ -81,7 +82,8 @@ const routes: Routes = [
   { path: 'add-tenant', component: AddTenantComponent},
   { path: 'properties', component: PropertiesComponent},
   { path: 'add-property', component: AddPropertyComponent},
-  { path: 'add-unit', component: AddUnitComponent}
+  { path: 'add-unit', component: AddUnitComponent},
+  { path: 'maintanance', component: MaintananceComponent}
 ]
 
 @NgModule({

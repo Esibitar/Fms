@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { PropertiesComponent } from './properties/properties.component';
 import { AddPropertyComponent } from './add-property/add-property.component';
 import { AddUnitComponent } from './add-unit/add-unit.component';
+import { MaintananceComponent } from './maintanance/maintanance.component';
 
 
 
@@ -10,7 +11,8 @@ import { AddUnitComponent } from './add-unit/add-unit.component';
   declarations: [
     PropertiesComponent,
     AddPropertyComponent,
-    AddUnitComponent
+    AddUnitComponent,
+    MaintananceComponent
   ],
   imports: [
     CommonModule

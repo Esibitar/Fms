@@ -1,0 +1,129 @@
+
+<main class="main" id="main">
+  <section class="section">
+    <div class="row">
+
+      <div class="row">
+        <div class="col-lg-3">
+          <div class="card" style="height: 450px;">
+            <div class="card-title" style="margin-left: 30px;">Filters</div>
+            <div class="card-body">
+
+              <div class="row mb-3">
+                <span>
+                 <label for="inputText" class="col-sm-10 col-form-label">Property/Unit</label>
+                 </span>
+                 <div class="col-sm-10">
+                  <select name="selectProperty" value="select property" class="form-control" required>
+                    <option selected></option>
+                    <option value="property1">Property 1</option>
+                    <option value="property2">Property 2</option>
+                    <option value="property3">Property 3</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="row mb-3">
+                <span>
+                  <label class="col-sm-10 col-form-label">Status</label>
+                </span>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="openCheckbox">
+                <label class="form-check-label" for="openCheckbox">
+                  Open
+                </label>
+              </div>
+
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="progressCheckbox">
+                <label class="form-check-label" for="progressCheckbox">
+                  In Progress
+                </label>
+              </div>
+
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="closedCheckbox">
+                <label class="form-check-label" for="closedCheckbox">
+                  Closed
+                </label>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="row">
+            <div class="col-lg-12 mb-3">
+              <div class="card" style="height: 200px;">
+                <div class="card-body">
+
+                  <div class="d-flex justify-content-between">
+                    <div>
+                      <h5 class="card-title">Open Requests</h5>
+                      <div class="d-flex align-items-center">
+                        <div class="card-icon rounded-circle d-flex align-items-center justify-content-center"></div>
+                        <div class="ps-3">
+                          <h6>3</h6>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div>
+                      <h5 class="card-title">In Progress Requests</h5>
+                      <div class="d-flex align-items-center">
+                        <div class="card-icon rounded-circle d-flex align-items-center justify-content-center"></div>
+                        <div class="ps-3">
+                          <h6>3</h6>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div>
+                      <h5 class="card-title">Closed</h5>
+                      <div class="d-flex align-items-center">
+                        <div class="card-icon rounded-circle d-flex align-items-center justify-content-center"></div>
+                        <div class="ps-3">
+                          <h6>3</h6>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-12">
+              <div class="card" style="height: 200px; width: 100%;">
+                <div class="card-body" style="overflow: auto;">
+                  <h5 class="card-title">Maintanance</h5>
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">Property Name</th>
+                        <th scope="col">Unit ID/Name</th>
+                        <th scope="col">status</th>
+                        <th scope="col">category</th>
+                        <th scope="col">Date</th>
+
+                      </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+    </div>
+  </section>
+</main>
