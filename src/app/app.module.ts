@@ -23,7 +23,6 @@ import { PaginationComponent } from './components/pagination/pagination.componen
 import { ProgressComponent } from './components/progress/progress.component';
 import { SpinnersComponent } from './components/spinners/spinners.component';
 import { TooltipsComponent } from './components/tooltips/tooltips.component';
-import { MyPropertyComponent } from './my-properties/my-property/components/my-properties/my-property.component';
 import { FormsLayoutsComponent } from './components/forms-layouts/forms-layouts.component';
 import { FormsEditorsComponent } from './components/forms-editors/forms-editors.component';
 import { TablesGeneralComponent } from './components/tables-general/tables-general.component';
