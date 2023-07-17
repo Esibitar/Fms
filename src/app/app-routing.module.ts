@@ -37,6 +37,13 @@ import { LoginComponent } from './auth/components/login/login.component';
 import { TenantDataComponent } from './tenants/tenant-data/tenant-data.component';
 import { ViewDataComponent } from './tenants/view-data/view-data.component';
 import { AvailableUnitsComponent } from './units/available-units/available-units.component';
+import { TenantsComponent } from './tenants/tenants/tenants.component';
+import { AddInvoiceComponent } from './tenants/add-invoice/add-invoice.component';
+import { AddTenantComponent } from './tenants/add-tenant/add-tenant.component';
+import { PropertiesComponent } from './my-properties/properties/properties.component';
+import { AddPropertyComponent } from './my-properties/add-property/add-property.component';
+import { AddUnitComponent } from './my-properties/add-unit/add-unit.component';
+import { MaintananceComponent } from './my-properties/maintanance/maintanance.component';
 
 const routes: Routes = [
 
@@ -74,6 +81,13 @@ const routes: Routes = [
   { path: 'pages-login', component: PagesLoginComponent },
   { path: 'pages-register', component: PagesRegisterComponent },
   { path: 'user-profile', component: UsersProfileComponent },
+  { path: 'tenants', component: TenantsComponent},
+  { path: 'add-invoice', component: AddInvoiceComponent},
+  { path: 'add-tenant', component: AddTenantComponent},
+  { path: 'properties', component: PropertiesComponent},
+  { path: 'add-property', component: AddPropertyComponent},
+  { path: 'add-unit', component: AddUnitComponent},
+  { path: 'maintanance', component: MaintananceComponent}
 ]
 
 @NgModule({

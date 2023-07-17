@@ -43,10 +43,7 @@ import { AccordionComponent } from './components/accordion/accordion.component';
 import { TablesDataComponent } from './components/tables-data/tables-data.component';
 import { TenantsModule } from './tenants/tenants.module';
 import { UnitsModule } from './units/units.module';
-import { MyPropertyModule } from './my-properties/my-property/my-property.module';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { AuthModule } from './auth/auth.module';
-
+import { MyPropertiesModule } from './my-properties/my-properties.module';
 
 @NgModule({
   declarations: [
@@ -90,7 +87,10 @@ import { AuthModule } from './auth/auth.module';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    TenantsModule,
+    UnitsModule,
+    MyPropertiesModule
   ],
   providers: [],
   bootstrap: [AppComponent]
