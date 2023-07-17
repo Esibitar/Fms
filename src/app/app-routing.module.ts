@@ -40,6 +40,7 @@ import { AddInvoiceComponent } from './tenants/add-invoice/add-invoice.component
 import { AddTenantComponent } from './tenants/add-tenant/add-tenant.component';
 import { PropertiesComponent } from './my-properties/properties/properties.component';
 import { AddPropertyComponent } from './my-properties/add-property/add-property.component';
+import { AddUnitComponent } from './units/add-unit/add-unit.component';
 
 const routes: Routes = [
   { path: '', component: DashboardComponent },
@@ -79,7 +80,8 @@ const routes: Routes = [
   { path: 'add-invoice', component: AddInvoiceComponent},
   { path: 'add-tenant', component: AddTenantComponent},
   { path: 'properties', component: PropertiesComponent},
-  { path: 'add-property', component: AddPropertyComponent}
+  { path: 'add-property', component: AddPropertyComponent},
+  { path: 'add-unit', component: AddUnitComponent}
 ]
 
 @NgModule({
