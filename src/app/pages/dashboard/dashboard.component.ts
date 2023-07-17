@@ -1,4 +1,5 @@
-import { Component, OnInit, ElementRef } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-dashboard',
@@ -6,6 +7,8 @@ import { Component, OnInit, ElementRef } from '@angular/core';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
+
+  @ViewChild('reportsCharts') lineChartRef: ElementRef;
 
   constructor(private elementRef: ElementRef) { }
 
@@ -16,5 +19,10 @@ export class DashboardComponent implements OnInit {
     s.src = "../assets/js/main.js";
     this.elementRef.nativeElement.appendChild(s);
   }
+
+
+
+
+
 
 }

@@ -1,7 +1,7 @@
 <main class="main" id="main">
     <section class="section">
         <div class="row">
-<button type="submit" style="width: 150px;" (click)="goBactToTenant()" class="btn btn-primary"><i class="bi bi-arrow-left" style="margin-right: 5px;"></i>Go Back</button>
+<button type="submit" style="width: 110px; background-color: transparent;" (click)="goBactToTenant()" class="btn btn-primary"><div style="color: black;"><i class="bi bi-arrow-left" style="margin-right: 5px;"></i>Go Back</div></button>
 </div>
 </section>
 </main>
@@ -18,16 +18,80 @@
                         <span>
                          <label for="inputText" class="col-sm-10 col-form-label">Property Name</label>
                          </span>
-                         <div class="col-sm-10"> <input type="text" name="propertyName" class="form-control"></div>
+                         <div class="col-sm-10"> <input type="text" name="propertyName" class="form-control" required></div>
                       </div>
                       <div class="row mb-3">
                          <label for="inputNumber" class="col-sm-10 col-form-label">Number of Units</label>
-                         <div class="col-sm-10"> <input type="number" class="form-control"></div>
+                         <div class="col-sm-10"> <input type="number" class="form-control" required></div>
                       </div>
-                      
+
+                      <div class="row mb-3">
+                        <span>
+                         <label for="inputText" class="col-sm-10 col-form-label">City (Optional)</label>
+                         </span>
+                         <div class="col-sm-10"> <input type="text" name="cityName" class="form-control"></div>
+                      </div>
+
+                      <div class="row mb-3">
+                        <span>
+                         <label for="inputText" class="col-sm-10 col-form-label">Street Name (Optional)</label>
+                         </span>
+                         <div class="col-sm-10"> <input type="text" name="cityName" class="form-control"></div>
+                      </div>
+
+                      <div class="row mb-3">
+                        <span>
+                          <label for="inputText" class="col-sm-10 col-form-label">Street Name (Optional)</label>
+                        </span>
+                        <div class="col-sm-10">
+                          <select name="streetName" class="form-control">
+                            <option value=""></option>
+                            <option value="street1">Street 1</option>
+                            <option value="street2">Street 2</option>
+                            <option value="street3">Street 3</option>
+                          </select>
+                        </div>
+                      </div>
+
+                      <div class="row mb-3">
+                        <span>
+                          <label for="paymentMethod" class="col-sm-10 col-form-label">Mpesa (Optional)</label>
+                        </span>
+                        <div class="col-sm-10">
+                          <label>
+                            <input type="radio" name="paymentMethod" value="paybill" (change)="togglePaymentMethod('paybill')"> Paybill
+                          </label>
+                          <label>
+                            <input type="radio" name="paymentMethod" value="tillNumber" (change)="togglePaymentMethod('tillNumber')"> Till Number
+                          </label>
+                        </div>
+                      </div>
+
+                      <div class="row mb-3" *ngIf="showPaybillInput">
+                        <label for="inputText" class="col-sm-10 col-form-label">Paybill</label>
+                        <div class="col-sm-10">
+                          <input type="text" name="paybill" class="form-control">
+                        </div>
+                      </div>
+
+                      <div class="row mb-3" *ngIf="showTillNumberInputs">
+                        <div class="col-sm-10">
+                          <label for="storeNumber">Store Number</label>
+                          <input type="text" name="storeNumber" class="form-control">
+                        </div>
+                        <div class="col-sm-10">
+                          <label for="tillNumber">Till Number</label>
+                          <input type="text" name="tillNumber" class="form-control">
+                        </div>
+                      </div>
+
+
+
+
                       <div class="row mb-3">
                          <label class="col-sm-10 col-form-label"></label>
-                         <div class="col-sm-10"> <button type="submit" class="btn btn-primary">Submit Form</button></div>
+                         <div class="col-sm-10"> <button type="submit" class="btn btn-primary"><i class="bi bi-plus"></i>Add Property</button></div>
+
                       </div>
                    </form>
                 </div>

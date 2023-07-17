@@ -16,4 +16,8 @@ export class PropertiesComponent {
 
   }
 
+  addUnit(){
+    this.router.navigate(['/add-unit']);
+  }
+
 }

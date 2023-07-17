@@ -1,6 +1,9 @@
+
 import { AppRoutingModule } from './app-routing.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from "@angular/common/http";
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './layouts/header/header.component';
@@ -20,7 +23,6 @@ import { PaginationComponent } from './components/pagination/pagination.componen
 import { ProgressComponent } from './components/progress/progress.component';
 import { SpinnersComponent } from './components/spinners/spinners.component';
 import { TooltipsComponent } from './components/tooltips/tooltips.component';
-import { FormsElementsComponent } from './components/forms-elements/forms-elements.component';
 import { FormsLayoutsComponent } from './components/forms-layouts/forms-layouts.component';
 import { FormsEditorsComponent } from './components/forms-editors/forms-editors.component';
 import { TablesGeneralComponent } from './components/tables-general/tables-general.component';
@@ -63,7 +65,6 @@ import { MyPropertiesModule } from './my-properties/my-properties.module';
     ProgressComponent,
     SpinnersComponent,
     TooltipsComponent,
-    FormsElementsComponent,
     FormsLayoutsComponent,
     FormsEditorsComponent,
     TablesGeneralComponent,
@@ -76,7 +77,11 @@ import { MyPropertiesModule } from './my-properties/my-properties.module';
     UsersProfileComponent,
     PagesFaqComponent,
     PagesContactComponent,
-   
+    PagesRegisterComponent,
+    PagesLoginComponent,
+    PagesError404Component,
+    PagesBlankComponent
+
 
   ],
   imports: [
