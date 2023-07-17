@@ -42,6 +42,8 @@ import { PropertiesComponent } from './my-properties/properties/properties.compo
 import { AddPropertyComponent } from './my-properties/add-property/add-property.component';
 import { AddUnitComponent } from './my-properties/add-unit/add-unit.component';
 import { MaintananceComponent } from './my-properties/maintanance/maintanance.component';
+import { UtilitiesComponent } from './my-properties/utilities/utilities.component';
+import { ViewUtilityComponent } from './my-properties/view-utility/view-utility.component';
 
 const routes: Routes = [
   { path: '', component: DashboardComponent },
@@ -83,7 +85,9 @@ const routes: Routes = [
   { path: 'properties', component: PropertiesComponent},
   { path: 'add-property', component: AddPropertyComponent},
   { path: 'add-unit', component: AddUnitComponent},
-  { path: 'maintanance', component: MaintananceComponent}
+  { path: 'maintanance', component: MaintananceComponent},
+  { path: 'utilities', component: UtilitiesComponent},
+  { path: 'view-utilities', component: ViewUtilityComponent}
 ]
 
 @NgModule({

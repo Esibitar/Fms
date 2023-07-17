@@ -1,0 +1,152 @@
+<main id="main" class="main">
+  <section class="section">
+      <div class="row">
+<div id="button"  class="text-center">
+<button type="submit" (click)="recordBulkUtility()" class="btn btn-primary" style="margin-left: 80%;"><i class="bi bi-plus"></i>Add Utility</button>
+</div>
+</div>
+</section>
+</main>
+
+
+
+<main class="main" id="main">
+  <section class="section">
+    <div class="row">
+
+      <div class="row">
+        <div class="col-lg-3">
+          <div class="card" style="height: 450px; overflow: auto;">
+            <div class="card-title" style="margin-left: 30px;">Filters</div>
+            <div class="card-body">
+
+              <div class="row mb-3">
+                <span>
+                  <label class="col-sm-10 col-form-label">Utility Item</label>
+                </span>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="openCheckbox">
+                <label class="form-check-label" for="openCheckbox">
+                  Internet
+                </label>
+              </div>
+
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="progressCheckbox">
+                <label class="form-check-label" for="progressCheckbox">
+                  Electricity
+                </label>
+              </div>
+
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="closedCheckbox">
+                <label class="form-check-label" for="closedCheckbox">
+                  Water
+                </label>
+              </div>
+
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="closedCheckbox">
+                <label class="form-check-label" for="closedCheckbox">
+                  Pay TV
+                </label>
+              </div>
+
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="closedCheckbox">
+                <label class="form-check-label" for="closedCheckbox">
+                  Cleaner
+                </label>
+              </div>
+
+
+              <div class="row mb-3">
+                <label for="startDateInput" class="col-sm-10 col-form-label">Start Date</label>
+                <div class="col-sm-10">
+                  <input type="date" id="startDateInput" name="startDate" class="form-control" required>
+                </div>
+              </div>
+
+              <div class="row mb-3">
+                <label for="endDateInput" class="col-sm-10 col-form-label">End Date</label>
+                <div class="col-sm-10">
+                  <input type="date" id="endDateInput" name="endDate" class="form-control" required>
+                </div>
+              </div>
+
+              <div class="row mb-3">
+                <span>
+                 <label for="inputText" class="col-sm-10 col-form-label">Property/Unit</label>
+                 </span>
+                 <div class="col-sm-10">
+                  <select name="selectProperty" value="select property" class="form-control" required>
+                    <option selected></option>
+                    <option value="property1">Property 1</option>
+                    <option value="property2">Property 2</option>
+                    <option value="property3">Property 3</option>
+                  </select>
+                </div>
+              </div>
+
+
+
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-9">
+          <div class="row">
+            <div class="col-lg-12 mb-3">
+              <div class="card" style="height: 200px;">
+                <div class="card-body">
+
+                  <h5 class="card-title">Utilities Records</h5>
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">Date</th>
+                        <th scope="col">Property</th>
+                        <th scope="col">Unit</th>
+                        <th scope="col">Utility</th>
+                        <th scope="col">Reading</th>
+                        <th scope="col">Actions</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>23/07/2023</td>
+                        <td>Otto</td>
+                        <td>@mdo/23</td>
+                        <td>Internet</td>
+                        <td>345</td>
+                        <td>
+                          <div class="dropdown">
+                            <button type="button" style="margin-left: 20px;" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              <i class="bi bi-three-dots"></i>
+                            </button>
+                            <div class="dropdown-menu">
+                              <a class="dropdown-item" href="/view-utilities">View</a>
+                              <a class="dropdown-item" href="/cards">Edit</a>
+                              <a class="dropdown-item" href="#">Delete</a>
+                            </div>
+                          </div>
+                        </td>
+
+                      </tr>
+                    </tbody>
+                  </table>
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+    </div>
+  </section>
+</main>
