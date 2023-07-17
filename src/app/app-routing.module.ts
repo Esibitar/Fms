@@ -11,7 +11,6 @@ import { CarouselComponent } from './components/carousel/carousel.component';
 import { ChartsApexchartsComponent } from './components/charts-apexcharts/charts-apexcharts.component';
 import { ChartsChartjsComponent } from './components/charts-chartjs/charts-chartjs.component';
 import { FormsEditorsComponent } from './components/forms-editors/forms-editors.component';
-import { FormsElementsComponent } from './components/forms-elements/forms-elements.component';
 import { FormsLayoutsComponent } from './components/forms-layouts/forms-layouts.component';
 import { IconsBootstrapComponent } from './components/icons-bootstrap/icons-bootstrap.component';
 import { IconsBoxiconsComponent } from './components/icons-boxicons/icons-boxicons.component';
@@ -32,6 +31,7 @@ import { PagesFaqComponent } from './pages/pages-faq/pages-faq.component';
 import { PagesLoginComponent } from './pages/pages-login/pages-login.component';
 import { PagesRegisterComponent } from './pages/pages-register/pages-register.component';
 import { UsersProfileComponent } from './pages/users-profile/users-profile.component';
+import { LoginComponent } from './auth/components/login/login.component';
 import { TenantDataComponent } from './tenants/tenant-data/tenant-data.component';
 import { ViewDataComponent } from './tenants/view-data/view-data.component';
 import { AvailableUnitsComponent } from './units/available-units/available-units.component';
@@ -44,7 +44,8 @@ import { AddUnitComponent } from './my-properties/add-unit/add-unit.component';
 import { MaintananceComponent } from './my-properties/maintanance/maintanance.component';
 
 const routes: Routes = [
-  { path: '', component: DashboardComponent },
+
+  { path: '', component: LoginComponent },
   { path: 'dashboard', component: DashboardComponent },
   {path: 'tenant-data', component: TenantDataComponent},
   { path: 'view-data', component: ViewDataComponent },
@@ -56,7 +57,6 @@ const routes: Routes = [
   { path: 'charts-apexcharts', component: ChartsApexchartsComponent },
   { path: 'charts-chartjs', component: ChartsChartjsComponent },
   { path: 'form-editors', component: FormsEditorsComponent },
-  { path: 'form-elements', component: FormsElementsComponent },
   { path: 'form-layouts', component: FormsLayoutsComponent },
   { path: 'icons-bootstrap', component: IconsBootstrapComponent },
   { path: 'icons-boxicons', component: IconsBoxiconsComponent },
