@@ -43,6 +43,7 @@ import { TablesDataComponent } from './components/tables-data/tables-data.compon
 import { TenantsModule } from './tenants/tenants.module';
 import { UnitsModule } from './units/units.module';
 import { MyPropertiesModule } from './my-properties/my-properties.module';
+import { FinanceModule } from './finance/finance.module';
 
 @NgModule({
   declarations: [
@@ -89,7 +90,8 @@ import { MyPropertiesModule } from './my-properties/my-properties.module';
     AppRoutingModule,
     TenantsModule,
     UnitsModule,
-    MyPropertiesModule
+    MyPropertiesModule,
+    FinanceModule
   ],
   providers: [],
   bootstrap: [AppComponent]

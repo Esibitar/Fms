@@ -1,5 +1,5 @@
 import { Component, ElementRef } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
 })
 export class AppComponent {
   title = 'rental-system';
-  constructor(private elementRef: ElementRef,  public  _router: Router) { }
+  constructor(private elementRef: ElementRef,  public  router: Router, private route: ActivatedRoute) { }
 
   ngOnInit() {
 
@@ -17,4 +17,6 @@ export class AppComponent {
     s.src = "../assets/js/main.js";
     this.elementRef.nativeElement.appendChild(s);
   }
+
+
 }

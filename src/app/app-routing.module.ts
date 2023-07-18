@@ -48,6 +48,7 @@ import { ViewUtilityComponent } from './my-properties/view-utility/view-utility.
 const routes: Routes = [
 
   { path: '', component: LoginComponent },
+  { path: 'login', component: LoginComponent },
   { path: 'dashboard', component: DashboardComponent },
   {path: 'tenant-data', component: TenantDataComponent},
   { path: 'view-data', component: ViewDataComponent },
@@ -87,7 +88,11 @@ const routes: Routes = [
   { path: 'add-unit', component: AddUnitComponent},
   { path: 'maintanance', component: MaintananceComponent},
   { path: 'utilities', component: UtilitiesComponent},
-  { path: 'view-utilities', component: ViewUtilityComponent}
+  { path: 'view-utilities', component: ViewUtilityComponent},
+  {
+    path: 'finance',
+    loadChildren: () => import('./finance/finance.module').then(m => m.FinanceModule)
+  }
 ]
 
 @NgModule({
