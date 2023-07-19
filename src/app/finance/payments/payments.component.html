@@ -1,85 +1,118 @@
-<main id="main" class="main">
+<main class="main" id="main">
   <section class="section">
-      <div class="row">
-<div id="button"  class="text-center">
-<button type="submit" (click)="addPayments()" class="btn btn-primary"><i class="bi bi-plus"></i>Payments</button>
+    <div class="row">
+<div class="row">
+  <div class="col-lg-3">
+    <div class="card" style="height: 450px; overflow: auto;">
+      <div class="card-title" style="margin-left: 30px;">Filters</div>
+      <div class="card-body">
+
+        <div class="row mb-3">
+          <span>
+            <label class="col-sm-10 col-form-label">Payment Status</label>
+          </span>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="openCheckbox">
+          <label class="form-check-label" for="openCheckbox">
+            Fully          
+          </label>
+        </div>
+
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="progressCheckbox">
+          <label class="form-check-label" for="progressCheckbox">
+            Partially
+          </label>
+        </div>
+
+      <div class="card" style="height: 120px; justify-content: center; align-items: center; display: flex; margin-top: 30px;">
+        <div class="card-body">
+        <div class="row mb-3">
+          <!-- <label for="startDateInput" class="col-sm-10 col-form-label">Start Date</label> -->
+          <div class="col-sm-10">
+            <input type="date" id="startDateInput" name="startDate" class="form-control" required>
+          </div>
+        </div>
+        <div class="row mb-3">
+          <!-- <label for="endDateInput" class="col-sm-10 col-form-label">End Date</label> -->
+          <div class="col-sm-10">
+            <input type="date" id="endDateInput" name="endDate" class="form-control" required>
+          </div>
+        </div>
+        </div>
+      </div>
+
+        <div class="row mb-3">
+          <span>
+           <label for="inputText" class="col-sm-10 col-form-label">Property/Unit</label>
+           </span>
+           <div class="col-sm-10">
+            <select name="selectProperty" value="select property" class="form-control" required>
+              <option selected></option>
+              <option value="property1">Property 1</option>
+              <option value="property2">Property 2</option>
+              <option value="property3">Property 3</option>
+            </select>
+          </div>
+        </div>
+
+
+
+      </div>
+    </div>
+  </div>
+
+  <div class="col-lg-9">
+    <div class="row">
+      <div class="col-lg-12 mb-3">
+        <div class="card" style="height: 200px;">
+          <div class="card-body">
+
+            <h5 class="card-title">Payments Records</h5>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">Date</th>
+                  <th scope="col">Property</th>
+                  <th scope="col">Unit Id</th>
+                  <th scope="col">Receipt No:</th>
+                  <th scope="col">Status</th>
+                  <th scope="col">Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>23/07/2023</td>
+                  <td>Otto</td>
+                  <td>@mdo/23</td>
+                  <td>RTK-098C</td>
+                  <td>finished</td>
+                  <td>
+                    <div class="dropdown">
+                      <button type="button" style="margin-left: 20px;" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="bi bi-three-dots"></i>
+                      </button>
+                      <div class="dropdown-menu">
+                        <button class="dropdown-item" routerLink="/view-utilities">View</button>
+                        <a class="dropdown-item" href="/cards">Edit</a>
+                        <a class="dropdown-item" href="#">Delete</a>
+                      </div>
+                    </div>
+                  </td>
+
+                </tr>
+              </tbody>
+            </table>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
+
 </div>
 </section>
-</main>
-
-<main id="main" class="main">
-  <section class="section">
-     <div class="row">
-        <div class="col-lg-12">
-           <div class="card">
-              <div class="card-body">
-                 <table class="table datatable">
-                    <thead>
-                       <tr>
-                          <th scope="col">#</th>
-                          <th scope="col">Amount</th>
-                          <th scope="col">Payment Method</th>
-                          <th scope="col">Payment Date</th>
-                          <th scope="col">tenant</th>
-                          <th scope="col">Lease</th>
-                          <th scope="col">Property</th>
-                          <th scope="col">Receipt Number</th>
-                          <th scope="col">Status</th>
-                          <th scope="col">Actions</th>
-                       </tr>
-                    </thead>
-                    <tbody>
-                       <tr>
-                          <th scope="row">1</th>
-                          <td>15000</td>
-                          <td>Mpesa</td>
-                          <td>2023-05-25</td>
-                          <td>James Karu</td>
-                          <td>LS005</td>
-                          <td>Kangundu House</td>
-                          <td>RCT-9005</td>
-                          <td>approved</td>
-                          <td>
-                            <div class="dropdown">
-                              <button type="button" style="margin-left: 20px;" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="bi bi-three-dots"></i>
-                              </button>
-                              <div class="dropdown-menu">
-                                <button class="dropdown-item" routerLink="/view-utilities">View</button>
-                                <a class="dropdown-item" href="/cards">Edit</a>
-                                <a class="dropdown-item" href="#">Delete</a>
-                              </div>
-                            </div>
-                          </td>
-                       </tr>
-                       <tr>
-                        <th scope="row">1</th>
-                        <td>15000</td>
-                        <td>Mpesa</td>
-                        <td>2023-05-25</td>
-                        <td>James Karu</td>
-                        <td>LS005</td>
-                        <td>Kangundu House</td>
-                        <td>RCT-9005</td>
-                        <td>approved</td>
-                     </tr>
-                     <tr>
-                      <th scope="row">1</th>
-                      <td>15000</td>
-                      <td>Mpesa</td>
-                      <td>2023-05-25</td>
-                      <td>James Karu</td>
-                      <td>LS005</td>
-                      <td>Kangundu House</td>
-                      <td>RCT-9005</td>
-                      <td>approved</td>
-                   </tr>
-                    </tbody>
-                 </table>
-              </div>
-           </div>
-        </div>
-     </div>
-  </section>
 </main>

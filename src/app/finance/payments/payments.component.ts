@@ -15,4 +15,6 @@ export class PaymentsComponent {
     this.router.navigate(['/finance/leases'])
   }
 
+  
+
 }
