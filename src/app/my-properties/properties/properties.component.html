@@ -1,18 +1,20 @@
-<main id="main" class="main">
-    <section class="section">
-        <div class="row">
-<div id="button"  class="text-center">
-  <button type="submit" (click)="addProperty()" class="btn btn-primary"><i class="bi bi-plus"></i>Add-Property</button><button type="reset" style="margin-left: 20px;" class="btn btn-secondary" (click)="addUnit()" ><i class="bi bi-plus"></i>Add Unit</button>
-</div>
-</div>
-</section>
-</main>
+
+
 
   <main id="main" class="main">
     <section class="section">
        <div class="row align-items-top">
           <div class="col-lg-12">
              <div class="card">
+
+              <div class="card-header card-header-accent" style="background-color: antiquewhite;">
+                <div class="mb-3 pb-1">
+                  <div class="d-flex justify-content-end ">
+                <button type="submit" (click)="addProperty()" class="btn btn-primary"><i class="bi bi-plus"></i>Add-Property</button><button type="reset" style="margin-left: 40px;" class="btn btn-secondary" (click)="addUnit()" ><i class="bi bi-plus"></i>Add Unit</button>
+              </div>
+              </div>
+              </div>
+
                 <div class="card-body">
                    <h5 class="card-title">Summary</h5>
 
@@ -38,7 +40,7 @@
 
                               <div clas="col-10">
                               <div class="ps-3">
-                                 <h1>0</h1>
+                                 <h1>{{totalProperties}}</h1>
                               </div>
                             </div>
                            </div>
@@ -47,6 +49,7 @@
                   </div>
                   <div class="col-xxl-4 col-xl-4" style="margin-left: 20px;">
                 <div class="card info-card customers-card">
+
                   <div class="card-body">
                     <h5 class="card-title"><i class="bi bi-house" style="margin-right: 5px;"></i>Total Vacancies</h5>
                     <div class="d-flex align-items-center">
@@ -69,25 +72,22 @@
                <div class="card-body">
                   <h5 class="card-title">Properties</h5>
 
-                  <table class="table">
+                  <table class="table" >
                     <thead>
                       <tr>
                         <th scope="col">Property Name</th>
                         <th scope="col">Number of Units</th>
                         <th scope="col">City</th>
-                        <th scope="col">Payment Method</th>
+                        <th scope="col">Street</th>
                       </tr>
                     </thead>
                     <tbody>
-                      <tr>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                      </tr>
-                      <tr>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
+                      <tr *ngFor="let property of properties">
+                        <td>{{property.name}}</td>
+                        <td>{{property.units}}</td>
+                        <td>{{property.city}}</td>
+                        <td>{{property.street}}</td>
+                        <td></td>
                       </tr>
                     </tbody>
                   </table>

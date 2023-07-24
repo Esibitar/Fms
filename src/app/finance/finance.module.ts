@@ -6,18 +6,24 @@ import { PaymentsComponent } from './payments/payments.component';
 import { LeasesComponent } from './leases/leases.component';
 import { FinanceComponent } from './finance.component';
 import { RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
+import { FilterPipe } from './filter.pipe';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 
 @NgModule({
   declarations: [
     PaymentsComponent,
     LeasesComponent,
-    FinanceComponent
+    FinanceComponent,
+    FilterPipe
   ],
   imports: [
     CommonModule,
     FinanceRoutingModule,
-    RouterModule
+    RouterModule,
+    FormsModule,
+    
   ]
 })
 export class FinanceModule { }

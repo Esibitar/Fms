@@ -44,6 +44,10 @@ import { TenantsModule } from './tenants/tenants.module';
 import { UnitsModule } from './units/units.module';
 import { MyPropertiesModule } from './my-properties/my-properties.module';
 import { FinanceModule } from './finance/finance.module';
+import { AuthModule } from './auth/auth.module';
+import { ToastrModule } from 'ngx-toastr';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgxSpinnerModule } from 'ngx-spinner';
 
 @NgModule({
   declarations: [
@@ -81,7 +85,9 @@ import { FinanceModule } from './finance/finance.module';
     PagesRegisterComponent,
     PagesLoginComponent,
     PagesError404Component,
-    PagesBlankComponent
+    PagesBlankComponent,
+
+
 
 
   ],
@@ -91,7 +97,13 @@ import { FinanceModule } from './finance/finance.module';
     TenantsModule,
     UnitsModule,
     MyPropertiesModule,
-    FinanceModule
+    FinanceModule,
+    AuthModule,
+    HttpClientModule,
+    FormsModule,
+    NgxSpinnerModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

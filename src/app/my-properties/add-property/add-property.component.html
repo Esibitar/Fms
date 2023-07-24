@@ -13,33 +13,33 @@
              <div class="card">
                 <div class="card-body">
                    <h5 class="card-title">Property Form</h5>
-                   <form>
+                   <form [formGroup]="formGroup" (ngSubmit)="addProperty()">
                       <div class="row mb-3">
                         <span>
                          <label for="inputText" class="col-sm-10 col-form-label">Property Name</label>
                          </span>
-                         <div class="col-sm-10"> <input type="text" name="propertyName" class="form-control" required></div>
+                         <div class="col-sm-10"> <input type="text" name="propertyName" class="form-control" formControlName="name" required></div>
                       </div>
                       <div class="row mb-3">
                          <label for="inputNumber" class="col-sm-10 col-form-label">Number of Units</label>
-                         <div class="col-sm-10"> <input type="number" class="form-control" required></div>
+                         <div class="col-sm-10"> <input type="number" class="form-control" formControlName="units" required></div>
                       </div>
 
                       <div class="row mb-3">
                         <span>
                          <label for="inputText" class="col-sm-10 col-form-label">City (Optional)</label>
                          </span>
-                         <div class="col-sm-10"> <input type="text" name="cityName" class="form-control"></div>
+                         <div class="col-sm-10"> <input type="text" name="cityName" class="form-control" formControlName="city"></div>
                       </div>
 
                       <div class="row mb-3">
                         <span>
                          <label for="inputText" class="col-sm-10 col-form-label">Street Name (Optional)</label>
                          </span>
-                         <div class="col-sm-10"> <input type="text" name="cityName" class="form-control"></div>
+                         <div class="col-sm-10"> <input type="text" name="cityName" class="form-control"formControlName="street" ></div>
                       </div>
 
-                      <div class="row mb-3">
+                      <!-- <div class="row mb-3">
                         <span>
                           <label for="inputText" class="col-sm-10 col-form-label">Street Name (Optional)</label>
                         </span>
@@ -51,7 +51,7 @@
                             <option value="street3">Street 3</option>
                           </select>
                         </div>
-                      </div>
+                      </div> -->
 
                       <div class="row mb-3">
                         <span>

@@ -1,8 +1,10 @@
 export class Property{
-  propertyName: string;
-   propertyLocation: string;
-    selectProperty: string;
-     propertyUnits: any;
-      propertyImage: File;
-      id?: string;
+  name: string;
+  units: number;
+  city: string;
+  street: string;
+  // propertyLocation: string;
+  //  propertyName: string;
+  // propertyUnits: string;
+
 }

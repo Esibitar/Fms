@@ -8,6 +8,8 @@ import { UtilitiesComponent } from './utilities/utilities.component';
 import { ViewUtilityComponent } from './view-utility/view-utility.component';
 import { EditUtilitiesComponent } from './edit-utilities/edit-utilities.component';
 import { PropertyUploadComponent } from './property-upload/property-upload.component';
+import { ToolbarModule } from 'primeng/toolbar';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -23,7 +25,11 @@ import { PropertyUploadComponent } from './property-upload/property-upload.compo
     PropertyUploadComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    ToolbarModule,
+    ReactiveFormsModule,
+    FormsModule
+
   ]
 })
 export class MyPropertiesModule { }

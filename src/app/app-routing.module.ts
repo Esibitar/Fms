@@ -44,10 +44,12 @@ import { AddUnitComponent } from './my-properties/add-unit/add-unit.component';
 import { MaintananceComponent } from './my-properties/maintanance/maintanance.component';
 import { UtilitiesComponent } from './my-properties/utilities/utilities.component';
 import { ViewUtilityComponent } from './my-properties/view-utility/view-utility.component';
+import { SignUpComponent } from './auth/components/sign-up/sign-up.component';
 
 const routes: Routes = [
 
-  { path: '', component: LoginComponent },
+  // { path: '', component: LoginComponent },
+  {path: '', redirectTo: 'login', pathMatch: 'full'},
   { path: 'login', component: LoginComponent },
   { path: 'dashboard', component: DashboardComponent },
   {path: 'tenant-data', component: TenantDataComponent},
@@ -89,6 +91,7 @@ const routes: Routes = [
   { path: 'maintanance', component: MaintananceComponent},
   { path: 'utilities', component: UtilitiesComponent},
   { path: 'view-utilities', component: ViewUtilityComponent},
+  { path: 'sign-up', component: SignUpComponent},
   {
     path: 'finance',
     loadChildren: () => import('./finance/finance.module').then(m => m.FinanceModule)

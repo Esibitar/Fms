@@ -1,0 +1,8 @@
+{
+  "/login": {
+      "target": "https://propertyio.onrender.com/login",
+      "secure": false,
+      "changeOrigin": true,
+      "logLevel": "debug"
+  }
+}

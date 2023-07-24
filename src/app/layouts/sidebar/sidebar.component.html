@@ -2,9 +2,9 @@
     <ul class="sidebar-nav" id="sidebar-nav">
        <li class="nav-item"> <a class="nav-link " routerLink="/dashboard"> <i class="bi bi-grid"></i> <span>Dashboard</span> </a></li>
        <li class="nav-item">
-          <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#"> <i class="bi bi-people"></i><span>Tenants</span><i class="bi bi-chevron-down ms-auto"></i> </a>
-          <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-            <li class="nav-item"> <a class="nav-link " routerLink="/tenants"> <i class="bi bi-people"></i> <span>Tenants</span> </a></li>
+          <a class="nav-link collapsed" data-bs-target="#tenants" data-bs-toggle="collapse" href="#"> <i class="bi bi-people"></i><span>Tenants</span><i class="bi bi-chevron-down ms-auto"></i> </a>
+          <ul id="tenants" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+            <li> <a  routerLink="/tenants"> <i class="bi bi-people"></i> <span>Tenants</span> </a></li>
              <li> <a routerLink="/tenant-data"> <i class="bi bi-people"></i><span>create tenant</span> </a></li>
              <li> <a routerLink="/view-data"> <i class="bi bi-people"></i><span>Tenant Data</span> </a></li>
 
@@ -12,8 +12,8 @@
           </ul>
        </li>
        <li class="nav-item">
-          <a class="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="collapse" href="#"> <i class="bi bi-building" ></i><span>My-Properties</span><i class="bi bi-chevron-down ms-auto"></i> </a>
-          <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <a class="nav-link collapsed" data-bs-target="#properties" data-bs-toggle="collapse" href="#"> <i class="bi bi-building" ></i><span>My-Properties</span><i class="bi bi-chevron-down ms-auto"></i> </a>
+          <ul id="properties" class="nav-content collapse " data-bs-parent="#sidebar-nav">
              <li> <a routerLink="/properties"> <i class="bi bi-circle"></i><span>Properties</span> </a></li>
              <li> <a routerLink="/maintanance"> <i class="bi bi-circle"></i><span>Maintanance</span> </a></li>
              <li> <a routerLink="/utilities"> <i class="bi bi-circle"></i><span>Utilities</span> </a></li>

@@ -13,6 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+
             "outputPath": "dist/rental-system",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -25,6 +26,7 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/ngx-toastr/toastr.css",
               "src/styles.css"
             ],
             "scripts": [
@@ -60,12 +62,17 @@
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
+            "options": {
+              "browserTarget": "rental-system:build",
+              "proxyConfig": "src/proxy.conf.json"
+            },
           "configurations": {
             "production": {
               "browserTarget": "rental-system:build:production"
             },
             "development": {
               "browserTarget": "rental-system:build:development"
+
             }
           },
           "defaultConfiguration": "development"

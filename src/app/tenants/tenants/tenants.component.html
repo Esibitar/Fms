@@ -1,26 +1,27 @@
-<main id="main" class="main">
-    <section class="section">
-        <div class="row">
-<div id="button" class="text-center"> <button type="submit" (click)="addTenant()" class="btn btn-primary"><i class="bi bi-plus"></i>Add-Tenant</button><button type="reset" style="margin-left: 20px;" class="btn btn-secondary"><i class="bi bi-telegram"></i>Send Reminders</button><div class="btn-group">
-    <button type="button" style="margin-left: 20px;" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      More Actions
-    </button>
-    <div class="dropdown-menu">
-      <a class="dropdown-item" href="/add-invoice">Add Invoce</a>
-      <a class="dropdown-item" href="/cards">Add Payment</a>
-      <a class="dropdown-item" href="#">Shift Tenant</a>
-    </div>
-  </div>
-</div>
-</div>
-</section>
-</main>
+
 
   <main id="main" class="main">
     <section class="section">
        <div class="row align-items-top">
           <div class="col-lg-12">
              <div class="card">
+              <div class="card-header card-header-accent" style="background-color: antiquewhite;">
+                <div class="mb-3 pb-1">
+                  <div class="d-flex justify-content-end">
+                  <div id="button" class="text-center"> <button type="submit" (click)="addTenant()" class="btn btn-primary"><i class="bi bi-plus"></i>Add-Tenant</button><button type="reset" style="margin-left: 20px;" class="btn btn-secondary"><i class="bi bi-telegram"></i>Send Reminders</button><div class="btn-group">
+                    <button type="button" style="margin-left: 20px;" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      More Actions
+                    </button>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="/add-invoice">Add Invoce</a>
+                      <a class="dropdown-item" href="/cards">Add Payment</a>
+                      <a class="dropdown-item" href="#">Shift Tenant</a>
+                    </div>
+                  </div>
+                </div>
+                </div>
+              </div>
+              </div>
                 <div class="card-body">
                    <h5 class="card-title">Summary</h5>
 
@@ -75,6 +76,31 @@
             <div class="card">
                <div class="card-body">
                   <h5 class="card-title">Tenants</h5>
+
+                  <table class="table datatable">
+                    <thead>
+                       <tr>
+                          <th scope="col">#</th>
+                          <th scope="col">Name</th>
+                          <th scope="col">  Property</th>
+                          <th scope="col">Unit</th>   
+                          <th scope="col">Status</th>
+                       </tr>
+                    </thead>
+                    <tbody>
+                       <tr *ngFor="let tenant of Tenants">
+                          <th scope="row"></th>
+                          <td>{{tenant.name}}</td>
+                          <td>{{tenant.property}}</td>
+                          <td>{{tenant.unit}}</td>
+                          <td>{{tenant.status}}</td>
+                          <td>
+                            <a href="/view-data">View Details</a>
+                          </td>
+                       </tr>
+                      
+                    </tbody>
+                 </table>
                   
                </div>
             </div>            
