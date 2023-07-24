@@ -47,7 +47,7 @@ import { ViewUtilityComponent } from './my-properties/view-utility/view-utility.
 
 const routes: Routes = [
 
-  { path: '', component: LoginComponent },
+  { path: '', component: DashboardComponent },
   { path: 'dashboard', component: DashboardComponent },
   {path: 'tenant-data', component: TenantDataComponent},
   { path: 'view-data', component: ViewDataComponent },
