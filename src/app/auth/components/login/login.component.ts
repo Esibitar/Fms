@@ -14,7 +14,7 @@ import { ToastrNotificationService } from 'src/app/toastrNotification/toastr.ser
 export class LoginComponent implements OnInit {
   formGroup: FormGroup;
   sessionObject: any;
-  isLoading = false;
+
 
   constructor(private router: Router, private authService: AuthService, private notificationToastr: ToastrNotificationService){
 
@@ -54,11 +54,9 @@ export class LoginComponent implements OnInit {
 
   login(){
     if(this.formGroup.valid){
-      this.isLoading = true;
 
       console.log(this.formGroup.value);
       this.authService.login(this.formGroup.value).subscribe((result) =>{//2000/ok
-        this.isLoading = false;
         // const id = result.id;
         //const token = result.token;
         sessionStorage.setItem('data', JSON.stringify(result));
@@ -70,11 +68,10 @@ export class LoginComponent implements OnInit {
       (error: HttpErrorResponse)=>{// 400 bad request
         if(error.status === 403){
           alert("invalid credentials")
-          this.isLoading = false;
+
         }
         else {// other
           alert("unknown error")
-          this.isLoading = false;
         }
       }
 
