@@ -47,7 +47,6 @@ import { FinanceModule } from './finance/finance.module';
 import { AuthModule } from './auth/auth.module';
 import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NgxSpinnerModule } from 'ngx-spinner';
 
 @NgModule({
   declarations: [
@@ -101,7 +100,6 @@ import { NgxSpinnerModule } from 'ngx-spinner';
     AuthModule,
     HttpClientModule,
     FormsModule,
-    NgxSpinnerModule,
     BrowserAnimationsModule,
     ToastrModule.forRoot()
   ],
