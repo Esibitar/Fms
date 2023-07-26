@@ -12,15 +12,12 @@ import { TenantService } from '../Service/tenant.service';
   styleUrls: ['./add-tenant.component.css']
 })
 export class AddTenantComponent {
-  formGroup: FormGroup;
+  form: FormGroup;
   username: any;
   password: any;
-  access_token: string;
 
 
-  constructor(private router: Router, private tenantService: TenantService, private authService: AuthService) {
-    this.access_token = this.authService.getAccessToken();
-   }
+  constructor(private router: Router, private tenantService: TenantService) { }
 
 
   tenant: { username: string, password: string } = { username: '', password: '' };
@@ -28,6 +25,7 @@ export class AddTenantComponent {
 
 
   addTenant() {
+    if(this.form.valid){
     this.tenantService.addTenant(this.tenant).subscribe(
       response => {
         // Handle the success response here (e.g., show a success message)
@@ -39,6 +37,7 @@ export class AddTenantComponent {
         console.error('Error adding tenant:', error);
       }
     );
+    }
   }
 
   private resetForm() {
