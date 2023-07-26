@@ -11,7 +11,7 @@ export class AuthService {
   sessionObject: any;
 
   login(data): Observable<any>{
-   return this.http.post('https://propertyio.onrender.com/login', data);  //https://dummyjson.com/auth/login, https://propertyio.onrender.com/login, http://192.168.0.108:8080/api/v1/auth/authenticate'
+   return this.http.post('https://6be7-154-159-252-222.ngrok-free.app/login', data);  //https://dummyjson.com/auth/login, https://propertyio.onrender.com/login, http://192.168.0.108:8080/api/v1/auth/authenticate'
   }
 
 
