@@ -13,42 +13,26 @@ export class TenantService {
 
   constructor(private http: HttpClient, private authService: AuthService) {
     // this.access_token = this.authService.getAccessToken();
+    this.access_token = this.authService.sessionData()?.access_token || '';
    }
 
+   setAccessToken(token: string): void {
+    this.access_token = token;
+  }
+
+  // Retrieve the access token
+  getAccessToken(): string {
+    return this.access_token;
+  }
+
   addTenant(tenant: { username: string, password: string }): Observable<any> {
+    console.log(this.access_token)
     const headers = new HttpHeaders({
       'Content-Type': 'application/json',
       'Authorization': `Bearer ${this.access_token}`
     });
+    console.log(tenant);
+    return this.http.post(this.registerTenantAPI, tenant, { headers });
 
-    return this.http.post(this.registerTenantAPI, tenant, { headers })
-      .pipe(
-        catchError((error) => {
-          if (error.status === 401) {
-            return this.refreshTokenAndRetry(tenant);
-          }
-          return throwError(error);
-        })
-      );
-  }
-
-  private refreshTokenAndRetry(tenant: { username: string, password: string }): Observable<any> {
-
-    return this.authService.refreshToken().pipe(
-      switchMap((newAccessToken: string) => {
-        this.access_token = newAccessToken;
-        const headers = new HttpHeaders({
-          'Content-Type': 'application/json',
-          'Authorization': `Bearer ${newAccessToken}`
-        });
-
-        // Retry the API request with the new access token
-        return this.addTenant(tenant);
-      }),
-      catchError((error) => {
-        // Handle token refresh error or any other errors
-        return throwError(error);
-      })
-    );
   }
 }

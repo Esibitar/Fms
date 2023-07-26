@@ -12,11 +12,13 @@ export class AuthService {
   sessionObject: any;
   private loginAPI = 'https://6be7-154-159-252-222.ngrok-free.app/login';
   private signupAPI = 'https://6be7-154-159-252-222.ngrok-free.app/login/landlord/registertenant';
-  private access_token: string = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJsYW5kbG9yZDE3QGdtYWlsIiwiZXhwIjoxNjkwMzUyNTY3LCJpc3MiOiJodHRwOi8vMTcyLjMwLjgwLjE6ODUwMC9sb2dpbiIsInJvbGVzIjpbImxhbmRsb3JkIl19.BCVqSJQnTz0v3fEhWmwGk_tmpbz9dv-fFcUxgxPR4tw';
+  private access_token: string = '';
 
   getAccessToken(): string {
     return this.access_token;
   }
+
+  
 
   refreshToken(): Observable<string> {
 
