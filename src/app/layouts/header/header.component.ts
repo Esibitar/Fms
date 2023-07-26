@@ -11,8 +11,8 @@ import { AuthService } from 'src/app/auth/services/auth.service';
 export class HeaderComponent implements OnInit {
 
   constructor(@Inject(DOCUMENT) private document: Document, private router: Router, private authService: AuthService) { }
-  c_username: string= "Admin";
-  imageprofile: string= "";
+  username: string= "Admin";
+  profilePic: string= "";
   firstname: string;
   secondname: string;
 
@@ -22,8 +22,9 @@ export class HeaderComponent implements OnInit {
 
    if(this.authService.sessionData() !== null){
     const sessionObject = this.authService.sessionData();
-    this.firstname = sessionObject.firstname;
-    this.secondname = sessionObject.secondname;
+    this.username = sessionObject.user.username;
+    this.profilePic = sessionObject.user.profilePic;
+
    }
 
   }

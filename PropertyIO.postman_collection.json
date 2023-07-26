@@ -1,0 +1,1088 @@
+{
+	"info": {
+		"_postman_id": "165d14cb-739c-49ec-9fa0-8d12f3a95f4c",
+		"name": "PropertyIO",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19054227"
+	},
+	"item": [
+		{
+			"name": "UserManagement",
+			"item": [
+				{
+					"name": "PROPERTY_COUNT",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/analytics/propertyCount/owner2@gmail",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"analytics",
+								"propertyCount",
+								"owner2@gmail"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AGENT_WITH_MY_PROPERTIES",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/agentWithMyProperties/john@gmail/agent001@gmail",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"agentWithMyProperties",
+								"john@gmail",
+								"agent001@gmail"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "MY_PARTNERS",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8085/myPartners/landlord1@gmail",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"myPartners",
+								"landlord1@gmail"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ADD_PARTNER",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/addOwner/agent@gmail/owner3@gmail",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"addOwner",
+								"agent@gmail",
+								"owner3@gmail"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "REMOVE_PARTNER",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/removeAgent/owner2@gmail/agent001@gmail",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"removeAgent",
+								"owner2@gmail",
+								"agent001@gmail"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ADD_PROPERTY",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/addProperty/agent001@gmail/kiwi1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"addProperty",
+								"agent001@gmail",
+								"kiwi1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET_USER_DETAILS",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/getUserDetails/agent001@gmail",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"getUserDetails",
+								"agent001@gmail"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ADD_USER_DETAILS",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"owner2@gmail\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/adddetails",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"adddetails"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "REMOVE_PROPERTY",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:8085/removeProperty/jgathiru@gmail.com/property1",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"removeProperty",
+								"jgathiru@gmail.com",
+								"property1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PARTNERS_ANALYTICS",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8085/analytics/partnersCount/landlord1@gmail.com",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"analytics",
+								"partnersCount",
+								"landlord1@gmail.com"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "PropertyManagement",
+			"item": [
+				{
+					"name": "UPDATE PROPERTY",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "data",
+									"value": "{\"propertyName\":\"guru\",\"county\":\"kiambu\"}",
+									"type": "text"
+								},
+								{
+									"key": "file",
+									"type": "file",
+									"src": []
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8080/updateProperty/kamindi",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"updateProperty",
+								"kamindi"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE_UNIT_CATEGORY",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"\":\"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/updateUnitCategory/property2/two bedroom",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"updateUnitCategory",
+								"property2",
+								"two bedroom"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ADD_UNIT_CATEGORY",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "data",
+									"value": "{\"type\":\"1 bedroom\",\"rentAmount\":2000, \"depositAmount\":6000}",
+									"type": "text"
+								},
+								{
+									"key": "files",
+									"type": "file",
+									"src": []
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8080/addUnitCategory/property1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"addUnitCategory",
+								"property1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ADD_UNIT",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"propertyName\":\"property1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/addUnit",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"addUnit"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CREATE_PROPERTY",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "data",
+									"value": "{\"propertyName\":\"miwa4\",\"county\":\"nyandarua\",\"units\":3,\"tenants\":67,\"ownerName\":\"landlord2@gmail\"}",
+									"type": "text"
+								},
+								{
+									"key": "file",
+									"type": "file",
+									"src": []
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8080/createProperty",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"createProperty"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CREATE_UNITTYPE",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"typeName\":\"1 bedroom\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/createUnitType",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"createUnitType"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE_PROPERTY",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "data",
+									"value": "{\"propertyName\":\"property1\",\"county\":\"Kiambu\",\"units\":4,\"tenants\":67}",
+									"type": "text"
+								},
+								{
+									"key": "file",
+									"type": "file",
+									"src": []
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8080/updateProperty/property1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"updateProperty",
+								"property1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET_PROPERTY",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/getProperty/property1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"getProperty",
+								"property1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET_UNITTYPES",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/getUnitTypes",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"getUnitTypes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "IS_MY_PROPERTY",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/isMyProperty/jgathiru@gmail.co/property1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"isMyProperty",
+								"jgathiru@gmail.co",
+								"property1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE_PROPERTY_IMAGE",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/User/Pictures/20230000-WEB-2023-Best-Home-Theater-Systems-Blog-Header-Mobile.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8080/updatePropertyImage/kangundu",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"updatePropertyImage",
+								"kangundu"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "RegistrationAndLogin",
+			"item": [
+				{
+					"name": "LOGIN",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "password",
+									"value": "password",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "landlord17@gmail",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://propertyio.onrender.com/login",
+							"protocol": "https",
+							"host": [
+								"propertyio",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CHANGE_PASSWORD",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzYW1AZ21haWwuY29tIiwiZXhwIjoxNjg4OTg2ODQzLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwNzkvbG9naW4iLCJyb2xlcyI6WyJ0ZW5hbnQiXX0.kwsl0-03g_0x3cfBt4zU5SvIt_dOH586qeHadS1xAYU",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"oldPassword\":\"abcde\",\r\n    \"newPassword\":\"abcd\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8079/general/update/password",
+							"host": [
+								"localhost"
+							],
+							"port": "8079",
+							"path": [
+								"general",
+								"update",
+								"password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ADD_ROLE",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzYW1AZ21haWwuY29tIiwiZXhwIjoxNjg4OTg1OTU4LCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwNzkvbG9naW4iLCJyb2xlcyI6WyJ0ZW5hbnQiXX0.LDrryr3cL5Zefx2meqrvsBOk5OMKRKLxWCj9ZTBI470",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":3,\r\n    \"name\":\"admin\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8079/general/addrole",
+							"host": [
+								"localhost"
+							],
+							"port": "8079",
+							"path": [
+								"general",
+								"addrole"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "REFRESH_TOKEN",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Refresh eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzYW1AZ21haWwuY29tIiwiZXhwIjoxNjg4OTkyNTk5LCJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwNzkvbG9naW4ifQ.jd17hnNJ53zzVKAl2eha7DgBGtSS03Z4O8SXPR1twHs",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8079/any/refreshToken",
+							"host": [
+								"localhost"
+							],
+							"port": "8079",
+							"path": [
+								"any",
+								"refreshToken"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "REGISTER_LANDLORD",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"landlord15@gmail\",\r\n    \"firstname\":\"pops\",\r\n    \"secondname\":\"Karu\",\r\n    \"sirname\":\"Kangethe\",\r\n    \"idnumber\":\"39307742\",\r\n    \"role\":\"landlord\",\r\n    \"password\": \"password\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8079/any/landlordRegister",
+							"host": [
+								"localhost"
+							],
+							"port": "8079",
+							"path": [
+								"any",
+								"landlordRegister"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "REGISTER_TENANT",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJsYW5kbG9yZDE3QGdtYWlsIiwiZXhwIjoxNjkwMjc5NTMxLCJpc3MiOiJodHRwOi8vMTcyLjMwLjgwLjE6ODU0MC9sb2dpbiIsInJvbGVzIjpbImxhbmRsb3JkIl19.II0YsvHpI3sSo3D9ePTab-zHWgw_ovMrJ-ZnkWzPgkE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"user3@gmail\",\r\n    \"password\":\"password\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://cgzjyltyqi.loclx.io/landlord/registertenant",
+							"protocol": "https",
+							"host": [
+								"cgzjyltyqi",
+								"loclx",
+								"io"
+							],
+							"path": [
+								"landlord",
+								"registertenant"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ProfileManagement",
+			"item": [
+				{
+					"name": "ADD_TENANT",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"gathiru@gmail\",\r\n    \"firstname\":\"James\",\r\n    \"secondname\":\"Gathiru\",\r\n    \"sirname\":\"Karu\",\r\n    \"idnumber\":\"39307742\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/addTenant",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"addTenant"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ADD_LANDLORD",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"landlord1@gmail\",\r\n    \"firstname\":\"James\",\r\n    \"secondname\":\"Gathiru\",\r\n    \"sirname\":\"Karu\",\r\n    \"idnumber\":\"39307742\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/addLandlord",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"addLandlord"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "IS_PROFILE_SET",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/isProfileSet/landlord4@gmail/landlord",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"isProfileSet",
+								"landlord4@gmail",
+								"landlord"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET_TENANT",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/getTenant/gathiru@gmail",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"getTenant",
+								"gathiru@gmail"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE_PROFILE_PIC",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/getAdmin/gathiru@gmail",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"getAdmin",
+								"gathiru@gmail"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET_LANDLORD",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8066/profile/getLandlord/landlord17@gmail",
+							"host": [
+								"localhost"
+							],
+							"port": "8066",
+							"path": [
+								"profile",
+								"getLandlord",
+								"landlord17@gmail"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "PaymentManager",
+			"item": [
+				{
+					"name": "ADD_CHARGE_ON_MATRIX",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"range\":\"7001-9000\",\r\n    \"cutAmount\":40\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8084/hello/addMatrix",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"hello",
+								"addMatrix"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CHARGES_TESTER",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8084/hello/1500",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"hello",
+								"1500"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PAY_RENT",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"user4@gmail\",\r\n    \"propertyName\":\"kangundu\",\r\n    \"unitName\":\"rm1\",\r\n    \"amount\":4600,\r\n    \"description\":\"rent payment\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8084/hello/payRent",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"hello",
+								"payRent"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CREATING_CURRENT_PAYMENT",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"user4@gmail\",\r\n    \"propertyName\":\"kangundu\",\r\n    \"unitName\":\"rm1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8084/hello/addCurrent",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"hello",
+								"addCurrent"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ImageUpload",
+			"item": [
+				{
+					"name": "IMAGE_UPLOAD",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/User/Pictures/dress.jpeg"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8100/uploader/upload",
+							"host": [
+								"localhost"
+							],
+							"port": "8100",
+							"path": [
+								"uploader",
+								"upload"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET_IMAGE",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://res.cloudinary.com/dc4blttbi/image/upload/v1690232976/zw8lypzzfoy5dalbww6a.jpg",
+							"protocol": "https",
+							"host": [
+								"res",
+								"cloudinary",
+								"com"
+							],
+							"path": [
+								"dc4blttbi",
+								"image",
+								"upload",
+								"v1690232976",
+								"zw8lypzzfoy5dalbww6a.jpg"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE_IMAGE",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8100/delete/zw8lypzzfoy5dalbww6a",
+							"host": [
+								"localhost"
+							],
+							"port": "8100",
+							"path": [
+								"delete",
+								"zw8lypzzfoy5dalbww6a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE_IMAGE",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/User/Pictures/20230000-WEB-2023-Best-Home-Theater-Systems-Blog-Header-Mobile.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8066/uploader/update/nxofsiooau5bpmwsgthp",
+							"host": [
+								"localhost"
+							],
+							"port": "8066",
+							"path": [
+								"uploader",
+								"update",
+								"nxofsiooau5bpmwsgthp"
+							],
+							"query": [
+								{
+									"key": "file",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

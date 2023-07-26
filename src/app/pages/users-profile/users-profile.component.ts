@@ -7,10 +7,10 @@ import { AuthService } from 'src/app/auth/services/auth.service';
   styleUrls: ['./users-profile.component.css']
 })
 export class UsersProfileComponent implements OnInit {
-  firstname: string = '';
+  username: string = '';
   lastname: string = '';
   gender: string = '';
-  profileImage: string = '';
+  profilePic: string = '';
   profileData: any;
 
   constructor(private authService: AuthService) { }
@@ -18,10 +18,10 @@ export class UsersProfileComponent implements OnInit {
   ngOnInit(): void {
     if(this.authService.sessionData() !== null){
         this.profileData = this.authService.sessionData();
-        this.firstname = this.profileData.user.firstName;
+        this.username = this.profileData.user.username;
         this.lastname = this.profileData.user.lastName;
         this.gender = this.profileData.gender;
-        this.profileImage = this.profileData.image;
+        this.profilePic = this.profileData.user.profilePic;
     }
   }
 

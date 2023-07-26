@@ -23,11 +23,11 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
     if(this.authService.sessionData()!== null){
     this.sessionObject = this.authService.sessionData();
-    console.log("mybject :"+this.sessionObject.token)
+    console.log("mybject :"+this.sessionObject.acess_token)
     if(this.sessionObject !== null){
-    const sessionToken = this.sessionObject.token;
+    const sessionToken = this.sessionObject.access_token;
       if(sessionToken !== null){
-        this.router.navigate(['/dashboard'])
+         this.router.navigate(['/dashboard'])
       }
     }
   }
@@ -46,7 +46,7 @@ export class LoginComponent implements OnInit {
 
   initForm(){
     this.formGroup = new FormGroup({
-      email: new FormControl('', Validators.required),
+     username : new FormControl('', Validators.required),
       password: new FormControl('', Validators.required)
 
     })
@@ -57,11 +57,23 @@ export class LoginComponent implements OnInit {
 
       console.log(this.formGroup.value);
       this.authService.login(this.formGroup.value).subscribe((result) =>{//2000/ok
+        if(result.role !== 'landlord'){
+          this.notificationToastr.errorMessage("unauthorized");
+          return;
+        }
+        // const accessToken = result.access_token;
+        // const refreshToken = result.refresh_token;
+        // const role = result.role;
+        // if (accessToken && refreshToken) {
+        //   sessionStorage.setItem('access_token', accessToken);
+        //   sessionStorage.setItem('refresh_token', refreshToken);
+
         // const id = result.id;
         //const token = result.token;
         sessionStorage.setItem('data', JSON.stringify(result));
         this.notificationToastr.showSuccess("successfully login")
         this.router.navigate(['dashboard']);
+
 
 
       },

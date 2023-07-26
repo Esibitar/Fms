@@ -12,6 +12,10 @@ export class ToastrNotificationService {
     this.toastr.success(message, 'Success', { timeOut: 3000 });
   }
 
+  errorMessage(message){
+    this.toastr.error(message, 'error', { timeOut: 5000 });
+  }
+
   // showError(message, title){
   //     this.toastr.error(message, title)
   // }

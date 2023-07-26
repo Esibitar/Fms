@@ -19,7 +19,7 @@ export class DashboardComponent implements OnInit {
     const data = sessionStorage.getItem('data');
     if(data!==null){
     const sessionObject = JSON.parse(data);
-    const sessionToken = sessionObject.token;
+    const sessionToken = sessionObject.acess_token;
     if(sessionToken === null)
     {
       this.router.navigate(['/login'])

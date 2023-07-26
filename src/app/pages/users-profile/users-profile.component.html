@@ -14,8 +14,8 @@
           <div class="col-xl-4">
              <div class="card">
                 <div class="card-body profile-card pt-4 d-flex flex-column align-items-center">
-                   <img src="{{ profileImage }}" alt="Profile" class="rounded-circle">
-                   <h2>Admin</h2>
+                   <img src="{{ profilePic }}" alt="Profile" class="rounded-circle">
+                   <h2>{{username}}</h2>
                 </div>
              </div>
           </div>
@@ -33,7 +33,7 @@
                          <h5 class="card-title">Profile Details</h5>
                          <div class="row">
                             <div class="col-lg-3 col-md-4 label ">Full Name</div>
-                            <div class="col-lg-9 col-md-8">{{ firstname }} {{ lastname }}</div>
+                            <div class="col-lg-9 col-md-8">{{ username }}</div>
                          </div>
                          <div class="row">
                             <div class="col-lg-3 col-md-4 label">Gender</div>
