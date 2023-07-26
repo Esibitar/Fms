@@ -1,10 +1,6 @@
 export class Property{
-  name: string;
+  propertyName: string;
   units: number;
-  city: string;
-  street: string;
-  // propertyLocation: string;
-  //  propertyName: string;
-  // propertyUnits: string;
-
+  tenants: number;
+  county: string;
 }

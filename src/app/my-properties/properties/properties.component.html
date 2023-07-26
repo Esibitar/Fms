@@ -77,16 +77,16 @@
                       <tr>
                         <th scope="col">Property Name</th>
                         <th scope="col">Number of Units</th>
-                        <th scope="col">City</th>
-                        <th scope="col">Street</th>
+                        <th scope="col">Tenants</th>
+                        <th scope="col">County</th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr *ngFor="let property of properties">
-                        <td>{{property.name}}</td>
+                        <td>{{property.propertyName}}</td>
                         <td>{{property.units}}</td>
-                        <td>{{property.city}}</td>
-                        <td>{{property.street}}</td>
+                        <td>{{property.tenants}}</td>
+                        <td>{{property.county}}</td>
                         <td></td>
                       </tr>
                     </tbody>

@@ -5,6 +5,7 @@ import { ViewDataComponent } from './view-data/view-data.component';
 import { TenantsComponent } from './tenants/tenants.component';
 import { AddInvoiceComponent } from './add-invoice/add-invoice.component';
 import { AddTenantComponent } from './add-tenant/add-tenant.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -17,7 +18,9 @@ import { AddTenantComponent } from './add-tenant/add-tenant.component';
     AddTenantComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule,
+    
   ]
 })
 export class TenantsModule { }

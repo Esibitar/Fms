@@ -8,8 +8,8 @@ import { Observable, map } from 'rxjs';
   providedIn: 'root'
 })
 export class PropertyServiceService {
-  private API_URL = 'http://192.168.0.108:8080/api/v1/rentals/register';
-  private access_token = "";
+  private API_URL = 'https://6be7-154-159-252-222.ngrok-free.app/properties/getProperties/landlord17@gmail';
+  private token = "";
 
   constructor(private http: HttpClient) { }
 
@@ -17,7 +17,7 @@ export class PropertyServiceService {
     const data = sessionStorage.getItem('data');
     if(data!==null){
     const sessionObject = JSON.parse(data);
-    this.access_token = sessionObject.token;
+    this.token = sessionObject.access_token;
 
     }
     // const headers = new HttpHeaders({
@@ -26,7 +26,7 @@ export class PropertyServiceService {
     // });
     const headers = new HttpHeaders()
     .set('content-type','application/json')
-    .set('Authorization',`Bearer ${this.access_token}`)
+    .set('Authorization',`Bearer ${this.token}`)
 
     this.http.post<any>(this.API_URL,propertydata,{ headers }).subscribe(
     response=>{
@@ -36,7 +36,7 @@ export class PropertyServiceService {
     },
     error =>{
 
-      console.log(this.access_token);
+      console.log(this.token);
       console.log("error prop:"+error.message);
 
     }
@@ -44,7 +44,8 @@ export class PropertyServiceService {
   }
 
   fetchProperties(){
-    return this.http.get<{[key: string]: Property}>('https://nyumbapay-663d7-default-rtdb.firebaseio.com/property.json')
+    
+    return this.http.get<{[key: string]: Property}>(this.API_URL)
       .pipe(map((res) =>{
         const properties = [];
         for(const key in res){
@@ -62,14 +63,15 @@ export class PropertyServiceService {
     const data = sessionStorage.getItem('data');
   if(data!==null){
   const sessionObject = JSON.parse(data);
-  this.access_token = sessionObject.token;
+  this.token = sessionObject.access_token;
+  this.token = sessionObject.user.username;
 
   }
   const headers = new HttpHeaders()
   .set('content-type','application/json')
-  .set('Authorization',`Bearer ${this.access_token}`)
+  .set('Authorization',`Bearer ${this.token}`)
 
-    return this.http.get<Property[]>('http://192.168.0.108:8080/api/v1/properties/', { headers } );
+    return this.http.get<Property[]>(this.API_URL, { headers } );
   }
 
 

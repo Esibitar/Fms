@@ -6,7 +6,7 @@ import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ToastrModule } from 'ngx-toastr';
-import { SpinnerLoaderComponent } from './spinner-loader/spinner-loader.component';
+
 
 
 
@@ -15,7 +15,6 @@ import { SpinnerLoaderComponent } from './spinner-loader/spinner-loader.componen
   declarations: [
     LoginComponent,
     SignUpComponent,
-    SpinnerLoaderComponent
   ],
   imports: [
     CommonModule,
