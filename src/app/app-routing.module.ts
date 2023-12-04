@@ -23,6 +23,10 @@ import { MaintananceComponent } from './my-properties/maintanance/maintanance.co
 import { UtilitiesComponent } from './my-properties/utilities/utilities.component';
 import { ViewUtilityComponent } from './my-properties/view-utility/view-utility.component';
 import { SignUpComponent } from './auth/components/sign-up/sign-up.component';
+import { IntellijTestComponent } from './auth/components/intellij-test/intellij-test.component';
+import { WorkOrderComponent } from './workorder/work-order/work-order.component';
+import { DispatcherScheduleComponent } from './dispatcher/dispatcher-schedule/dispatcher-schedule.component';
+
 
 const routes: Routes = [
 
@@ -52,10 +56,13 @@ const routes: Routes = [
   { path: 'utilities', component: UtilitiesComponent},
   { path: 'view-utilities', component: ViewUtilityComponent},
   { path: 'sign-up', component: SignUpComponent},
+  { path: 'testing', component: IntellijTestComponent},
   {
     path: 'finance',
     loadChildren: () => import('./finance/finance.module').then(m => m.FinanceModule)
-  }
+  },
+  {path: 'workorder', component: WorkOrderComponent},
+  {path: 'dispatcher', component: DispatcherScheduleComponent}
 ]
 
 @NgModule({

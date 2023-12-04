@@ -1,0 +1,56 @@
+<!-- <div>
+    <h2>Dispatch and Scheduling</h2>
+    <div *ngFor="let technician of technicians">
+      <p>{{ technician.name }} - {{ technician.status }}</p>
+      Add scheduling and dispatching UI elements here 
+    </div>
+  </div> -->
+
+  <main class="main" id="main">
+    <section class="section">
+      <div class="row">
+  <div class="row">
+  
+    <div class="col-lg-12">
+      <div class="row">
+        <div class="col-lg-12 mb-3">
+          <div class="card">
+            
+            <div class="card-header card-header-accent" style="background-color: antiquewhite;">
+              <div class="mb-3 pb-1">
+                <h5 class="card-title">Dispatcher</h5>
+            </div>
+            </div>
+            <div class="card-body">
+              <div class="table-responsive">
+              <table class="table datatable">
+                <thead>
+                  <tr>
+                    <th scope="col">Technician Name</th>
+                    <th scope="col">Technician Status</th>
+                    
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let technician of technicians">
+                    <td>{{technician.name}}</td>
+                    <td>{{technician.status}}</td>
+                  </tr>
+                </tbody>
+              </table>
+              </div>
+  
+  
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  </div>
+  </section>
+  </main>
+  
+
+

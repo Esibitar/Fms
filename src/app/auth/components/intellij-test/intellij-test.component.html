@@ -1,0 +1,37 @@
+
+
+
+<main id="main" class="main">
+    <section class="section">
+       <div class="row align-items-top">
+
+
+          <div class="col-lg-12">
+            <div class="card">
+               <div class="card-body">
+                  <table class="table" >
+                    <thead>
+                      <tr>
+                        <th scope="col"> Name</th>
+                        <th scope="col"> Email</th>
+                        <th scope="col">Date of Birth</th>
+                        
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor="let Api of details">
+                        <td>{{Api.name}}</td>
+                        <td>{{Api.email}}</td>
+                        <td>{{Api.dob}}</td>
+                        <td></td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+               </div>
+            </div>
+         </div>
+
+       </div>
+    </section>
+ </main>

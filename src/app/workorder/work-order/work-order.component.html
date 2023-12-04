@@ -1,0 +1,10 @@
+<main id="main" class="main">
+<div class="card-body">
+   <h5 class="card-title">Work Orders</h5>
+    <ul>
+      <li *ngFor="let workOrder of workOrders">
+        {{ workOrder.title }} - {{ workOrder.status }}
+      </li>
+    </ul>
+  </div>
+  </main>

@@ -57,10 +57,10 @@ export class LoginComponent implements OnInit {
 
       console.log(this.formGroup.value);
       this.authService.login(this.formGroup.value).subscribe((result) =>{//2000/ok
-        if(result.role !== 'landlord'){
-          this.notificationToastr.errorMessage("unauthorized");
-          return;
-        }
+        // if(result.role !== 'landlord'){
+        //   this.notificationToastr.errorMessage("unauthorized");
+        //   return;
+        // }
         // const accessToken = result.access_token;
         // const refreshToken = result.refresh_token;
         // const role = result.role;

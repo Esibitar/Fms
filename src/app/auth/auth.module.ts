@@ -6,6 +6,7 @@ import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ToastrModule } from 'ngx-toastr';
+import { IntellijTestComponent } from './components/intellij-test/intellij-test.component';
 
 
 
@@ -15,6 +16,7 @@ import { ToastrModule } from 'ngx-toastr';
   declarations: [
     LoginComponent,
     SignUpComponent,
+    IntellijTestComponent,
   ],
   imports: [
     CommonModule,

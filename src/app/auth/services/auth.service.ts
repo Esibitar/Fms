@@ -4,13 +4,13 @@ import { FormGroup } from '@angular/forms';
 import { Observable, map } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root' 
 })
 export class AuthService {
 
   constructor(private http: HttpClient) { }
   sessionObject: any;
-  private loginAPI = 'https://6be7-154-159-252-222.ngrok-free.app/login';
+  private loginAPI = 'https://dummyjson.com/auth/login';
   private signupAPI = 'https://6be7-154-159-252-222.ngrok-free.app/login/landlord/registertenant';
   private access_token: string = '';
 
@@ -83,7 +83,7 @@ registerTenant(username: string, password: string): Observable<any>{
 
  /*
  private readonly registration_api_url = 'https://example.com/api/register';
-  private readonly access_token = 'your_access_token'; // Replace with the actual access token
+  private readonly access_token = 'your_oneaccess_token'; // Replace with the actual access token
 
   constructor(private http: HttpClient) {}
 

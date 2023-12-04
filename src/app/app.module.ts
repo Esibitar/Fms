@@ -18,6 +18,8 @@ import { FinanceModule } from './finance/finance.module';
 import { AuthModule } from './auth/auth.module';
 import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { WorkOrderComponent } from './workorder/work-order/work-order.component';
+import { DispatcherScheduleComponent } from './dispatcher/dispatcher-schedule/dispatcher-schedule.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +28,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     SidebarComponent,
     FooterComponent,
     DashboardComponent,
+    WorkOrderComponent,
+    DispatcherScheduleComponent,
  
 
   ],
